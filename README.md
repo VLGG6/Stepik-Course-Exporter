@@ -53,17 +53,16 @@ streamlit run app.py
 
 ```
 exports/
-└── course_<id>_<title>/
+└── <title>/
     ├── course.json
     ├── modules/
-    │   ├── module_<id>_<title>/
-    │   │   ├── module.json
+    │   ├── <title>/
     │   │   ├── lessons/
-    │   │   │   ├── lesson_<id>_<title>.md
-    │   │   │   └── lesson_<id>_<title>.json
+    │   │   │   ├── <title>.md
+    │   │   │   └── ...
     │   │   └── ...
     │   └── ...
-    └── errors.log (если были ошибки)
+    └── errors.log  (если были ошибки)
 ```
 
 ## Зависимости
