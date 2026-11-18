@@ -495,7 +495,7 @@ def export_course(
 
     for si, entry in enumerate(tree, 1):
         section = entry["section"]
-        sec_dir = course_dir / "modules" / f"module_{section.get('id')}_{safe_filename(section.get('title') or f'section_{section.get('id')}')}"
+        sec_dir = course_dir / "modules" / safe_filename(section.get("title") or f"section_{section.get('id')}")
         sec_dir.mkdir(parents=True, exist_ok=True)
         modules += 1
 
@@ -517,7 +517,7 @@ def export_course(
             try:
                 # Заголовок урока для имени файла
                 lesson_title = lesson.get("title") or f"unit_{unit.get('id')}"
-                lesson_md_path = lessons_dir / f"lesson_{lesson.get('id')}_{safe_filename(lesson_title)}.md"
+                lesson_md_path = lessons_dir / f"{safe_filename(lesson_title)}.md"
 
                 parts: List[str] = []
                 try:
